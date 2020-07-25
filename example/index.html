@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scoped Prototype</title>
+    <script src="../protos.js?scope=file" type="application/javascript"></script>
+    <script src="sample.js" type="application/javascript"></script>
+    <script>
+        const arrayToStringLoc2 = () => [1,2,3].toString();
+        const stringTrimLoc2 = () => "   Hello!!!!".trim(/[\s!]/);
+        const numberToFixedLoc2 = () => (15.8).toFixed(-4);
+    </script>
+</head>
+<body>
+    <h1>Protos Examples</h1>
+    <p>This is an example show case of what you can do with Protos.</p>
+    <p>As you can see in the below table, each script file execution behaves differently.</p>
+
+    <table border="1" cellpadding="10">
+        <tr align="left">
+            <th>Expression \ Script Location</th>
+            <th><pre>sample.js</pre> (overridden)</th>
+            <th><pre>index.html</pre> (native)</th>
+        </tr>
+        <tr align="left">
+            <th><pre>[1,2,3].toString()</pre></th>
+            <td><pre id="array-tostring-loc1"></pre></td>
+            <td><pre id="array-tostring-loc2"></pre></td>
+        </tr>
+        <tr align="left">
+            <th><pre>"   Hello!!!!".trim(/[\s!]/)</pre></th>
+            <td><pre id="string-trim-loc1"></pre></td>
+            <td><pre id="string-trim-loc2"></pre></td>
+        </tr>
+        <tr align="left">
+            <th><pre>(15.8).toFixed(-4)</pre></th>
+            <td><pre id="number-tofixed-loc1"></pre></td>
+            <td><pre id="number-tofixed-loc2"></pre></td>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById('array-tostring-loc1').innerText = arrayToStringLoc1();
+        document.getElementById('string-trim-loc1').innerText = stringTrimLoc1();
+        document.getElementById('number-tofixed-loc1').innerText = numberToFixedLoc1();
+
+        document.getElementById('array-tostring-loc2').innerText = arrayToStringLoc2();
+        document.getElementById('string-trim-loc2').innerText = stringTrimLoc2();
+        try {
+            numberToFixedLoc2();
+        } catch (e) {
+            document.getElementById('number-tofixed-loc2').innerText = e.message;
+        }
+    </script>
+
+</body>
+</html>
