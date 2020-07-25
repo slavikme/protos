@@ -2,9 +2,9 @@
  * Protos JavaScript Library v1.0.0
  * https://github.com/slavikme/protos
  *
- * Copyright OpenJS Foundation and other contributors
+ * Copyright © 2020 Slavik Meltser
  * Released under the MIT license
- * https://github.com/slavikme/protos/LICENSE
+ * https://slavikme.github.io/protos/LICENSE
  *
  * Date: 2020-07-10
  */
