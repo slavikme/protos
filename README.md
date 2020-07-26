@@ -11,7 +11,7 @@ All you need is to add this library as the first script in your HTML page.
 <html>
     <head>
         <title>...</title>
-        <script src="https://slavikme.github.io/protos/protos.js" 
+        <script src="https://slavikme.github.io/protos/dist/protos-1.0.0-min.js" 
                 type="application/javascript"></script>
         ...
     </head>
@@ -44,7 +44,7 @@ By default, Protos will scope the script files by origin. If you like to change 
 In order to change it, just pass the `scope` parameter to the `protos.js` script, with the value as one of the options above.  
 For example:
 ```html
-<script src="https://slavikme.github.io/protos/protos.js?scope=file" 
+<script src="https://slavikme.github.io/protos/dist/protos-1.0.0-min.js?scope=file" 
         type="application/javascript"></script>
 ``` 
 
