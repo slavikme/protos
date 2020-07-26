@@ -143,3 +143,6 @@ fabric.properties
 
 .idea
 *.iml
+
+
+dist
